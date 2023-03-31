@@ -5,11 +5,11 @@ import RealityKit
 import Metal
 
 private let logger = Logger(subsystem: "com.apple.sample.photogrammetry",
-                            category: "HelloPhotogrammetry")
+                            category: "Photogrammetry")
 
 /// Implements the main command structure, defines the command-line arguments,
 /// and specifies the main run loop.
-struct HelloPhotogrammetry: ParsableCommand {
+struct Photogrammetry: ParsableCommand {
     
     private typealias Configuration = PhotogrammetrySession.Configuration
     private typealias Request = PhotogrammetrySession.Request
@@ -220,7 +220,7 @@ extension PhotogrammetrySession.Configuration.FeatureSensitivity {
 
 // Run the program until completion.
 if #available(macOS 12.0, *) {
-    HelloPhotogrammetry.main(["/Users/amiteshsinha/Desktop/AirForce",
+    Photogrammetry.main(["/Users/amiteshsinha/Desktop/AirForce",
                             "/Users/amiteshsinha/Desktop/AirForce_usdz/airforce.usdz",
                             "-d", "medium", "-f", "normal"])
 } else {
